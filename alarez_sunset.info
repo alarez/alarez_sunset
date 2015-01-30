@@ -1,0 +1,5 @@
+name = AlarezSunset
+description = Paying around with backdrop theming.
+package = alarez
+backdrop = 1.x
+stylesheets[all][] = layout.css

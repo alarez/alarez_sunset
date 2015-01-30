@@ -1,0 +1,42 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: alarez_sunset (app)
+
+ @author: Alain Martinez
+ @www: paralleldevs.com
+ @github: alarez
+
+ @twitter: alarez21
+
+ @copyright: COPYRIGHT 1-29-2015 ParallelDevs
+ =============================================================================
+ Filename: _type.scss
+ =============================================================================
+ This file is responsible for typographic elements on the alarez_sunset app.  Styles should be compiled using compass and sass.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+@import url($alarezSunsetFontURL);
+
+/* Type */
+#{headings(all)} {
+	font-weight: $alarezSunsetHeadingFontWeight;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-size: (($alarezSunsetEm * $alarezSunsetMultiplierLarge) - (($i * (($alarezSunsetEm * $alarezSunsetMultiplierLarge) / 6 )))) + ($alarezSunsetEm * $alarezSunsetMultiplier);
+	}
+}
+
+a {
+	@extend %transition-all;
+	color: $alarezSunsetInverseTextColour;
+	&:visited {
+		color: darken($alarezSunsetTextColour, 30);
+	}
+	text-decoration: none;
+}
+
+ul, ol, dl {
+	padding-left: ($alarezSunsetPaddingLarge * $alarezSunsetMultiplier);
+	@extend %normal-margin-top-bottom;
+}
